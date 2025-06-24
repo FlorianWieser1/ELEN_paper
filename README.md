@@ -30,6 +30,7 @@ To address this, we introduce the **Equivariant Loop Evaluation Network (ELEN)**
 <p align="center">
   <img src="af2_xtal_overlayed_docday.png" alt="ELEN Model Overview" width="600" />
 </p>
+
 ## Status and Availability
 
 This project is currently in active development and pending publication. The source code, trained models, and datasets will be made publicly available upon official release.
