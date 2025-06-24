@@ -9,6 +9,9 @@ To address this, we introduce the **Equivariant Loop Evaluation Network (ELEN)**
 <p align="center">
   <img src="ELEN_scheme_new.svg" alt="ELEN Model Overview" width="400" />
 </p>
+<p align="center">
+  <img src="af2_xtal_overlayed_docday.png" alt="ELEN Model Overview" width="400" />
+</p>
 
 ## Key Features
 
