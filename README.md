@@ -9,9 +9,7 @@ To address this, we introduce the **Equivariant Loop Evaluation Network (ELEN)**
 <p align="center">
   <img src="ELEN_scheme_new.svg" alt="ELEN Model Overview" width="400" />
 </p>
-<p align="center">
-  <img src="af2_xtal_overlayed_docday.png" alt="ELEN Model Overview" width="400" />
-</p>
+
 
 ## Key Features
 
@@ -29,7 +27,9 @@ To address this, we introduce the **Equivariant Loop Evaluation Network (ELEN)**
 - Demonstrates competitive or superior accuracy compared to state-of-the-art MQA methods on the Continuous Automated Model EvaluatiOn (CAMEO) benchmark dataset.
 
 - Primarily designed for loop quality assessment but shows promise for broader residue-level quality evaluation tasks, including identifying flexible or disordered regions and assessing effects of single-residue mutations.
-
+<p align="center">
+  <img src="af2_xtal_overlayed_docday.png" alt="ELEN Model Overview" width="400" />
+</p>
 ## Status and Availability
 
 This project is currently in active development and pending publication. The source code, trained models, and datasets will be made publicly available upon official release.
