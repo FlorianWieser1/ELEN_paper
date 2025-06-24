@@ -5,7 +5,7 @@
 In contemporary protein design, advanced machine learning algorithms generate novel amino acid sequences with unprecedented functionalities, such as enzymes with enhanced catalytic rates or new reactivities. These designed sequences are typically assessed *in silico* using deep learning-based protein structure prediction methods. While these models excel at predicting well-ordered regions, accurately modeling **loop regions**—which are often flexible and crucial for protein function—remains a significant challenge.
 
 To address this, we introduce the **Equivariant Loop Evaluation Network (ELEN)**, a local model quality assessment (MQA) method tailored specifically for evaluating the quality of protein loops.
-![ELEN Model Overview](elen_scheme_new.png)
+![ELEN Model Overview](ELEN_scheme_new.svg)
 
 ## Key Features
 
