@@ -1,0 +1,11 @@
+performed on computational models of CASP
+according to Lemkul J. protocol (paper) - cubic box with water and ions
+simulation time 1ns
+force field OPLS/LA
+water model SPC/E
+ions Na(+)Cl(-)
+temperature 500K
+energy minimization steepest descent
+
+post processing: removing periodic boundary condition after centering protein molecule 
+simulation only valid if RMSD (initial, final) < 2.5 A
