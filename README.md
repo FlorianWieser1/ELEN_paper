@@ -7,7 +7,7 @@ In contemporary protein design, advanced machine learning algorithms generate no
 To address this, we introduce the **Equivariant Loop Evaluation Network (ELEN)**, a local model quality assessment (MQA) method tailored specifically for evaluating the quality of protein loops.
 
 <p align="center">
-  <img src="ELEN_scheme_new.svg" alt="ELEN Model Overview" width="400" />
+  <img src="images/ELEN_scheme_new.svg" alt="ELEN Model Overview" width="400" />
 </p>
 
 
@@ -28,7 +28,7 @@ To address this, we introduce the **Equivariant Loop Evaluation Network (ELEN)**
 
 - Primarily designed for loop quality assessment but shows promise for broader residue-level quality evaluation tasks, including identifying flexible or disordered regions and assessing effects of single-residue mutations.
 <p align="center">
-  <img src="af2_xtal_overlayed_docday.png" alt="ELEN Model Overview" width="600" />
+  <img src="images/af2_xtal_overlayed_docday.png" alt="ELEN Model Overview" width="600" />
 </p>
 
 ## Status and Availability
