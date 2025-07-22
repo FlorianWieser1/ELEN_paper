@@ -1,0 +1,30 @@
+<ROSETTASCRIPTS>
+	<SCOREFXNS>
+		<ScoreFunction name="ref2015" weights="ref2015"/>
+	</SCOREFXNS>
+	<RESIDUE_SELECTORS>
+	</RESIDUE_SELECTORS>
+	<PACKER_PALETTES>
+	</PACKER_PALETTES>
+	<TASKOPERATIONS>
+	</TASKOPERATIONS>
+	<MOVE_MAP_FACTORIES>
+	</MOVE_MAP_FACTORIES>
+  <SIMPLE_METRICS>
+    <RMSDMetric name="rms" use_native="1" rmsd_type="rmsd_all" super="1"/>
+    <SasaMetric name="sasa" sasa_metric_mode="all_sasa"/>
+    <TotalEnergyMetric name="energy" scorefxn="ref2015"/>
+    <PerResidueRMSDMetric name="prrmsd" use_native="1" rmsd_type="rmsd_all" super="1"/>
+    <PerResidueSasaMetric name="prsasa" mode="all_sasa"/>
+    <PerResidueEnergyMetric name="prenergy" use_native="0" scorefxn="ref2015"/>
+	</SIMPLE_METRICS>
+	<FILTERS>
+	</FILTERS>
+	<MOVERS>
+    <RunSimpleMetrics name="simple_metric" metrics="rms,prrmsd"/>
+	</MOVERS>
+	<PROTOCOLS>
+    <Add mover_name="simple_metric"/>
+	</PROTOCOLS>
+	<OUTPUT />
+</ROSETTASCRIPTS>

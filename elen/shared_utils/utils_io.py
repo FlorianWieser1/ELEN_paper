@@ -1,7 +1,10 @@
 import csv
 import json
 import h5py
+import logging
 from typing import Dict, Any
+
+logger = logging.getLogger(__name__)
 
 def load_from_hdf5(path: str) -> Dict[str, Any]:
     """
@@ -19,7 +22,8 @@ def load_from_hdf5(path: str) -> Dict[str, Any]:
             for protein_id in f.keys():
                 dict_data[protein_id] = f[protein_id][()]  # Load the dataset into memory
     except (OSError, KeyError) as e:
-        print(f"Error loading HDF5 file: {e}")
+        logger.error(f"Error loading HDF5 file '{path}': {e}")
+        dict_data = {}
     return dict_data
 
 def load_from_json(path: str) -> Dict[str, Any]:
@@ -32,12 +36,12 @@ def load_from_json(path: str) -> Dict[str, Any]:
     Returns:
         Dict[str, Any]: A dictionary containing the data from the JSON file.
     """
+    dict_data = {}
     try:
         with open(path, 'r') as f:
             dict_data = json.load(f)
     except (OSError, json.JSONDecodeError) as e:
-        print(f"Error loading JSON file: {e}")
-        dict_data = {}
+        logger.error(f"Error loading JSON file '{path}': {e}")
     return dict_data
 
 def load_from_csv(path: str) -> Dict[str, Any]:
@@ -59,10 +63,12 @@ def load_from_csv(path: str) -> Dict[str, Any]:
     try:
         with open(path, mode='r', newline='', encoding='utf-8') as f:
             reader = csv.DictReader(f)
+            if reader.fieldnames is None:
+                logger.warning(f"CSV file '{path}' appears to have no header row.")
             for idx, row in enumerate(reader):
                 data[idx] = row
     except (OSError, csv.Error) as e:
-        print(f"Error loading CSV file: {e}")
+        logger.error(f"Error loading CSV file '{path}': {e}")
     return data
 
 def dump_dict_to_json(dict_serialized: Dict[str, Any], path_json: str) -> None:
@@ -72,12 +78,9 @@ def dump_dict_to_json(dict_serialized: Dict[str, Any], path_json: str) -> None:
     Parameters:
         dict_serialized (Dict[str, Any]): The dictionary to write.
         path_json (str): The path to the JSON file where the dictionary should be saved.
-
-    Returns:
-        None
     """
     try:
         with open(path_json, "w") as f:
             json.dump(dict_serialized, f, indent=4)
     except OSError as e:
-        print(f"Error writing to JSON file: {e}")
+        logger.error(f"Error writing to JSON file '{path_json}': {e}")

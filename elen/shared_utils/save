@@ -1,8 +1,0 @@
-import numpy as np                                                                                                                                                                   
-num_bins = 30                                                                                                                                                                        
-bins = np.linspace(0, num_bins, num_bins + 1)                                                                                                                                        
-data = []                                                                                                                                                                            
-for key, count in dict_loop_lengths.items():                                                                                                                                         
-▏   data.extend([int(key)] * count)                                                                                                                                                  
-                                                                                                                                                                                     
-plt.hist(data, bins=bins, color="seagreen", log=True, zorder=2)   
