@@ -8,17 +8,17 @@
 
 # install torch/cuda dependencies
 #TODO try old shi conda channel way of installing torch
-TORCH="1.13.0"
-CUDA="cu116"
-
-pip install torch==${TORCH}+${CUDA} -f https://download.pytorch.org/whl/torch_stable.html
-pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
-pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
-pip install torch-geometric
-
-pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
-pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
-exit 0
+#TORCH="1.13.0"
+#CUDA="cu116"
+#
+#pip install torch==${TORCH}+${CUDA} -f https://download.pytorch.org/whl/torch_stable.html
+#pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
+#pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
+#pip install torch-geometric
+#
+#pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
+#pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
+#exit 0
 # install other dependencies
 pip install pytorch-lightning 
 
