@@ -1,5 +1,4 @@
-#!/home/florian_wieser/miniconda3/envs/elen_pub/bin/python3
-#TODO change overwrite flag to True again
+#!/home/florian_wieser/miniconda3/envs/elen_inference/bin/python3
 import os
 import sys
 import argparse
