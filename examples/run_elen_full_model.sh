@@ -7,7 +7,7 @@
 # Description: Will run the full ELEN model (including Rosetta and LLM features)
 
 # activate conda environment
-source activate elen_test
+source activate elen_inference
 
 # Defaults
 INPUT_DIR="input_ELEN_full_model"

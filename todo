@@ -1,0 +1,6 @@
+maybe disentangle pytorch args from elen args
+add docu about saprot installation
+add more examples and comment them well
+add dssp to dependencies or comment about it
+add info about main flags to run elen
+check README.md from EDN
