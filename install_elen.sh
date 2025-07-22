@@ -1,19 +1,19 @@
 #!/bin/bash 
 
 # create conda environment
-conda create -n elen_inference python=3.9 pip
-source activate elen_inference
-
-# install torch/cuda dependencies
-# choose correct torch+cuda versions to match your setup
-TORCH="2.1.2"
-CUDA="cu121"
-pip install torch==${TORCH}+${CUDA} -f https://download.pytorch.org/whl/torch_stable.html
-pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
-pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
-pip install torch-geometric
-pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
-pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
+#conda create -n elen_inference python=3.9 pip
+#source activate elen_inference
+#
+## install torch/cuda dependencies
+## choose correct torch+cuda versions to match your setup
+#TORCH="2.1.2"
+#CUDA="cu121"
+#pip install torch==${TORCH}+${CUDA} -f https://download.pytorch.org/whl/torch_stable.html
+#pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
+#pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
+#pip install torch-geometric
+#pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
+#pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
 
 # install other dependencies
 pip install pytorch-lightning==1.9.0
