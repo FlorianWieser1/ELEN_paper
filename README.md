@@ -1,3 +1,4 @@
+❯ cat elen_readme_update.md
 # ELEN - Equivariant Loop Evaluation Network
 
 ## Overview
@@ -9,7 +10,6 @@ To address this, we introduce the **Equivariant Loop Evaluation Network (ELEN)**
 <p align="center">
   <img src="images/ELEN_scheme_new.svg" alt="ELEN Model Overview" width="400" />
 </p>
-
 
 ## Key Features
 
@@ -27,9 +27,62 @@ To address this, we introduce the **Equivariant Loop Evaluation Network (ELEN)**
 - Demonstrates competitive or superior accuracy compared to state-of-the-art MQA methods on the Continuous Automated Model EvaluatiOn (CAMEO) benchmark dataset.
 
 - Primarily designed for loop quality assessment but shows promise for broader residue-level quality evaluation tasks, including identifying flexible or disordered regions and assessing effects of single-residue mutations.
+
 <p align="center">
   <img src="images/af2_xtal_overlayed_docday.png" alt="ELEN Model Overview" width="600" />
 </p>
+
+## Installation Instructions
+
+Follow these steps to install ELEN and its dependencies:
+
+### 1. Create and Activate Conda Environment
+
+```bash
+conda create -n elen_inference python=3.9 pip
+conda activate elen_inference
+```
+
+### 2. Install PyTorch and CUDA Dependencies
+
+Adjust `TORCH` and `CUDA` variables based on your system:
+
+```bash
+TORCH="2.1.2"
+CUDA="cu121"
+
+pip install torch==${TORCH}+${CUDA} -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
+pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
+pip install torch-geometric
+pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
+pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-${TORCH}+${CUDA}.html
+```
+
+### 3. Install Other Dependencies
+
+```bash
+pip install pytorch-lightning==1.9.0
+pip install tabulate wandb seaborn atom3d
+```
+
+### 4. Install e3nn
+
+```bash
+pip install git+https://github.com/drorlab/e3nn_edn.git
+```
+
+### 5. Install PyRosetta
+
+```bash
+conda install pyrosetta
+```
+
+### 6. Install ELEN
+
+```bash
+pip install -e .
+```
 
 ## Status and Availability
 
@@ -42,3 +95,4 @@ For inquiries, collaborations, or further information, please contact Florian Wi
 ---
 
 *This repository serves as a public overview of the ELEN project. Detailed implementations will be shared once published.*
+
