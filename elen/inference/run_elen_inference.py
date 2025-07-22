@@ -1,4 +1,4 @@
-#!/home/florian_wieser/miniconda3/envs/elen_test/bin/python3
+#!/usr/bin/env python
 #SBATCH -J ELEN_inference
 #SBATCH -o ELEN_inference_%j.log
 #SBATCH -e ELEN_inference_%j.err

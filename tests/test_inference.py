@@ -1,4 +1,4 @@
-#!/home/florian_wieser/miniconda3/envs/elen_inference/bin/python3
+#!/usr/bin/env python
 import os
 import sys
 import argparse
@@ -25,6 +25,7 @@ def test_run_inference_smoketest(inpath, outpath, elen_models):
         num_workers=0,
         overwrite=True,
         path_saprot_embeddings=None,  # Assuming no embeddings for smoketest
+        saprot_embeddings_file="saprot_650M.h5",
         save_features=False,  # Print features for testing
     )
         

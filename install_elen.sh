@@ -1,9 +1,8 @@
 #!/bin/bash 
 
-# INSTALLATION
 # create conda environment
 conda create -n elen_inference python=3.9 pip
-conda activate elen_inference
+source activate elen_inference
 
 # install torch/cuda dependencies
 # choose correct torch+cuda versions to match your setup
@@ -24,7 +23,9 @@ pip install tabulate wandb seaborn atom3d
 pip install git+https://github.com/drorlab/e3nn_edn.git
 
 # install pyrosetta
-conda install pyrosetta
+pip install pyrosetta-installer
+python -c 'import pyrosetta_installer; pyrosetta_installer.install_pyrosetta()'
+
 
 # install ELEN #TODO change to project.toml?
 pip install -e .

@@ -74,7 +74,8 @@ pip install git+https://github.com/drorlab/e3nn_edn.git
 ### 5. Install PyRosetta
 
 ```bash
-conda install pyrosetta
+pip install pyrosetta-installer 
+python -c 'import pyrosetta_installer; pyrosetta_installer.install_pyrosetta()'
 ```
 
 ### 6. Install ELEN
@@ -82,6 +83,9 @@ conda install pyrosetta
 ```bash
 pip install -e .
 ```
+
+## Examples
+TODO
 
 ## Status and Availability
 
