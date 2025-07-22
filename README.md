@@ -1,4 +1,3 @@
-❯ cat elen_readme_update.md
 # ELEN - Equivariant Loop Evaluation Network
 
 ## Overview
