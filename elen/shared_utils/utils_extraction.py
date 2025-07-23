@@ -1,13 +1,4 @@
 #!/usr/bin/env python3
-"""
-Loop and residue pocket extraction tool for PDB files.
-
-- Extracts loop regions based on DSSP secondary structure assignment.
-- Extracts residue pockets (local environments) around each residue.
-- Cleans PDBs and supports chain/numbering normalization.
-
-Author: Florian Wieser
-"""
 import warnings
 import os
 import sys
@@ -22,6 +13,7 @@ from Bio.PDB.DSSP import DSSP
 from Bio import pairwise2
 import numpy as np
 from elen.inference.utils_inference import get_total_number_of_residues
+from elen.config import PATH_DSSP
 from pyrosetta.toolbox.cleaning import cleanATOM
 
 # Suppress noisy warnings from BioPython
@@ -263,7 +255,7 @@ def extract_loops(path_pdb, outpath, ss_frag, ss_frag_size, loop_max_size, nr_re
     structure = pdb_parser.get_structure("protein", path_pdb)
     for chain in structure[0]:
         path_pdb = rosetta_numbering(path_pdb, chain)
-        ss, sequence = get_BioPython_DSSP(path_pdb, "/home/florian_wieser/miniconda3/envs/elen_test/bin/mkdssp")
+        ss, sequence = get_BioPython_DSSP(path_pdb, PATH_DSSP)
         print_ruler(ss, sequence)
         loop_positions = get_loop_positions(ss, ss_frag, ss_frag_size, loop_max_size)
         for idx, loop in enumerate(loop_positions):

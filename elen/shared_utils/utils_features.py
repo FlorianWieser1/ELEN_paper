@@ -291,7 +291,7 @@ def calculate_residue_features_pyrosetta_rs(paths_pdb, outpath, path_discarded):
     Runs RosettaScripts SimpleMetrics XML via PyRosetta using XmlObjects,
     extracting residue features from the pose, and writes residue_features.json.
     """
-    pyrosetta.init("-mute all")
+    pyrosetta.init("-mute all", silent=True)
     path_xml = pkg_resources.resource_filename('elen.shared_utils.resources', 'metrics_for_residue_features.xml')
     result_dict = {}
 
