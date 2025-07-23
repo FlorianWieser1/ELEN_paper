@@ -16,7 +16,7 @@ OUTPUT_DIR="output_ELEN_no_saprot"
 python ../elen/inference/run_elen_inference.py \
     --input_dir "$INPUT_DIR" \
     --output_dir "$OUTPUT_DIR" \
-	--pocket_type "RP" \
+	--pocket_type "LP" \
     --elen_models_dir "../models" \
     --feature_mode "no_saprot" \
     --overwrite

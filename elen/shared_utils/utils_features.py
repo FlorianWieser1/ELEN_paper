@@ -14,9 +14,6 @@ from pyrosetta.rosetta.protocols.rosetta_scripts import XmlObjects
 from elen.shared_utils.utils_io import dump_dict_to_json
 from elen.shared_utils.utils_pdb import discard_pdb, get_residue_ids
 
-# Initialize PyRosetta in silent mode
-pyrosetta.init("-mute all")
-
 logging.basicConfig(
     level=logging.INFO,
     format="[%(asctime)s][%(levelname)s] %(message)s",

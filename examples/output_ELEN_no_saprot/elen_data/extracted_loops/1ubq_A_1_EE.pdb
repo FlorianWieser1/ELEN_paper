@@ -326,4 +326,6 @@ ATOM    325  NH1 ARG A  74      43.754  30.312  28.356  0.45 42.75           N
 ATOM    326  NH2 ARG A  74      45.477  29.726  29.763  0.45 41.93           N  
 TER     327      ARG A  74                                                       
 END   
-residue_position_tensor 6
+loop_type EE
+loop_position 5 8
+loop_position_target 8 11
